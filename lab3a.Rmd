@@ -1,0 +1,31 @@
+---
+title: "Math 152 Lab 3"
+author: "Clark Bowman and Chinthaka Kuruwita"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+The code snippet below loads the data set (I have already entered the link to this week's data) and tells R we are going to use the "ggplot2" library, which makes very nice looking plots. If you do not have ggplot2 installed, you may first have to install it in Tools -> Install Packages. Once you have run this code, you can delete this description, but leave the code snippet there so that your final submission (which re-runs all the code from scratch) will work correctly.
+
+```{r}
+tuition <- read.csv("https://raw.githubusercontent.com/cmrbowman/24s-152/main/tuition.csv")
+library(ggplot2)
+```
+
+## Question 1.
+
+Here is some text that I am just typing out to describe my calculations and to answer some of the questions on this week's Lab. Lorum ipsum etc. It will be followed by a calculation.
+
+```{r}
+
+```
+
+Now I am going to describe the results of my calculation in great detail.
+
+## Question 2.
+
+Here is some more text because there is another question to answer.
+
+```{r}
+
+```
