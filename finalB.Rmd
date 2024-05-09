@@ -1,0 +1,29 @@
+---
+title: "Math 152 Final B"
+author: "Your Name Here"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r}
+ncbirths <- read.csv("https://raw.githubusercontent.com/cmrbowman/24s-152/main/ncbirths.csv")
+library(ggplot2)
+```
+
+## Question 1.
+
+Here is some text that I am just typing out to describe my calculations and to answer some of the questions on this week's Lab. Lorum ipsum etc. It will be followed by a calculation.
+
+```{r}
+
+```
+
+Now I am going to describe the results of my calculation in great detail.
+
+## Question 2.
+
+Here is some more text because there is another question to answer.
+
+```{r}
+
+```
