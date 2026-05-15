@@ -1,0 +1,140 @@
+---
+title: "Math 254 Final Lab"
+author: "YOUR NAME HERE"
+date: "`r Sys.Date()`"
+output: word_document
+---
+
+```{r}
+candy <- read.csv("https://raw.githubusercontent.com/cmrbowman/26s-254/refs/heads/main/candy.csv")
+library(ggplot2)
+diamonds <- diamonds
+library(randomForest)
+library(FNN)
+library(rpart)
+library(rpart.plot)
+```
+
+# Part I - Diamonds
+
+### (a) Is there evidence that color and clarity are related?
+
+TEXT
+
+```{r}
+
+```
+
+### (b) Is there evidence that diamonds with the “best” color (D) are worth more than diamonds with the “second best” color (E)?
+
+TEXT
+
+```{r}
+
+```
+
+### (c) Based on this sample, what is the average price per carat of all diamonds sold in the U.S.?
+
+TEXT
+
+```{r}
+
+```
+
+### (d) The code below creates a new variable valuable which marks if a diamond is worth more than $10,000 per carat; a 0 means “no”, while a 1 means “yes”. Develop a logistic model for valuable in terms of the other variables BESIDES carat and price (it would be cheating to use those!). Show all work. Your model does not need to be the absolute best model possible, but should show at least one example of deciding to put a term in the model (and why) and at least one example of deciding NOT to put a term in the model (and why).
+
+```{r}
+diamonds$valuable <- as.numeric(diamonds$price / diamonds$carat > 10000)
+```
+
+TEXT
+
+```{r}
+
+```
+
+### (e) Interpret your model, including an explicit interpretation of at least one coefficient (meaning the actual number, not just whether it’s positive or negative). Comment on which variables are practically important and why.
+
+TEXT
+
+```{r}
+
+```
+
+### (f) According to your logistic model, are diamonds with the “best” color (D) more likely to be “valuable” than diamonds with the “second best” color (E)? Compare this approach to the approach you used to answer a similar question in (b). What are the advantages and disadvantages of each approach?
+
+TEXT
+
+```{r}
+
+```
+
+### (g) Using any method you like, estimate how accurate your model would be with a threshold of 0.5 on new data.
+
+TEXT
+
+```{r}
+
+```
+
+# Part II - Candy
+
+### (a) Choose a few variables that look fun and make a decision tree model for winpercent in terms of those variables.
+
+TEXT
+
+```{r}
+
+```
+
+### (b) Interpret your model, including making a diagram of your tree and explaining how to read that diagram.
+
+TEXT
+
+```{r}
+
+```
+
+### (c) Using any method you like, estimate the RMSE (root mean squared error) of your tree on new data.
+
+TEXT
+
+```{r}
+
+```
+
+### (d) The code below fits a random forest model with every variable other than name. Use this model to make a variable importance plot. Explain briefly what that plot shows.
+
+```{r}
+model_full <- randomForest(winpercent ~ . - name, candy)
+```
+
+TEXT
+
+```{r}
+
+```
+
+### (e) Develop a random forest model for winpercent in terms of the other variables. Show all work. Your model does not need to be the best model possible, but should show at least one example of deciding to put a term in the model (and why) and at least one example of deciding NOT to put a term in the model (and why).
+
+TEXT
+
+```{r}
+
+```
+
+### (f) Develop a KNN model for winpercent in terms of the other variables using K = 5. Show all work. Your model does not need to be the best model possible, but should show at least one example of deciding to put a term in the model (and why) and at least one example of deciding NOT to put a term in the model (and why).
+
+TEXT
+
+```{r}
+
+```
+
+### (g) Using any method you like, compare the performance of the three models in this Part.
+
+TEXT
+
+```{r}
+
+```
